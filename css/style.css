@@ -385,6 +385,18 @@ html {
   }
 }
 
+.wrapper {
+  flex-direction: row-reverse; /* Змінюємо порядок, щоб aside було зліва */
+}
+
+aside {
+  width: 423px; /* Якщо вам потрібна конкретна ширина для aside */
+}
+
+main {
+  flex: 1; /* main займатиме решту доступного місця */
+}
+
 .product {
   position: relative;
   overflow: hidden;
@@ -894,19 +906,5 @@ h1 {
   .finger-container {
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media (min-width: 769px) {
-  .wrapper {
-    flex-direction: row-reverse; /* Змінюємо порядок, щоб aside було зліва */
-  }
-
-  aside {
-    width: 423px; /* Якщо вам потрібна конкретна ширина для aside */
-  }
-
-  main {
-    flex: 1; /* main займатиме решту доступного місця */
   }
 }
