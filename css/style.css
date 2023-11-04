@@ -102,6 +102,7 @@ p,
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
 /* Page Studio */
@@ -314,12 +315,6 @@ html {
   | FINGER
   |============================
 */
-
-.finger-list-projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
 .finger-list {
   display: flex;
@@ -736,6 +731,7 @@ h1 {
 
 .finger-list-projects {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
   margin: 0;
@@ -786,7 +782,7 @@ h1 {
   }
 
   .scene {
-    width: 120px; /* половина від 210px */
+    width: 130px; /* половина від 210px */
     height: 160px; /* половина від 270px */
   }
 
@@ -892,10 +888,9 @@ h1 {
   .address-item {
     border: none !important;
     box-shadow: none !important;
-    font-size: 16px;
+    font-size: 12px;
   }
 
-  /* Якщо тінь застосована до конкретного контейнера навігації, замініть селектор нижче */
   .page-header,
   .nav,
   .address {
@@ -906,5 +901,81 @@ h1 {
   .finger-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    animation:
+      fadeIn 0.3s,
+      fadeOut 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .back-to-top img {
+    width: 50px;
+    height: auto;
+  }
+
+  .project-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Скидання відступів для всіх елементів може також бути корисним */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box; /* Щоб padding не впливав на загальну ширину елементів */
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 100%; /* Встановлюємо ширину 100% для мобільних пристроїв */
+    padding: 0 15px; /* Додаємо невеликі відступи з боків, щоб контент не прилипав до країв екрану */
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .menu {
+    margin-left: 20px;
+    column-gap: 20px;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .finger-list-projects {
+    padding: 0 20px;
   }
 }
