@@ -912,6 +912,7 @@ h1 {
     animation:
       fadeIn 0.3s,
       fadeOut 0.3s;
+    max-width: 50%;
   }
 
   @keyframes fadeIn {
@@ -933,7 +934,7 @@ h1 {
   }
 
   .back-to-top img {
-    width: 50px;
+    width: 25px;
     height: auto;
   }
 
